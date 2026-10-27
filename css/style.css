@@ -508,3 +508,78 @@ body {
     .back-link { margin-bottom: 1.2rem; }
 }
 ::selection { background: rgba(43, 122, 158, 0.3); color: var(--blue-900); }
+/* 首页新闻入口卡片 */
+.news-entry-wrap {
+    margin-top: 2rem;
+    animation: fadeInUp 0.7s 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.news-entry-card {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.3rem 1.8rem;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 16px 34px -18px rgba(0, 60, 130, 0.3), 0 0 0 1px rgba(255,255,255,0.5) inset;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, background 0.3s;
+}
+.news-entry-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 26px 46px -20px rgba(0, 80, 180, 0.4), 0 0 0 1px rgba(255,255,255,0.9) inset;
+}
+.news-entry-icon {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: linear-gradient(140deg, var(--blue-600), var(--blue-500));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    box-shadow: 0 10px 20px -6px rgba(0, 70, 150, 0.45);
+}
+.news-entry-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.news-entry-text strong {
+    font-size: 1.15rem;
+    color: var(--blue-800);
+    letter-spacing: -0.01em;
+}
+.news-entry-text span {
+    font-size: 0.85rem;
+    color: #4a6d92;
+}
+.news-entry-arrow {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-500);
+    background: rgba(28, 90, 156, 0.08);
+    border: 1px solid rgba(28, 90, 156, 0.15);
+    transition: all 0.3s;
+}
+.news-entry-card:hover .news-entry-arrow {
+    background: linear-gradient(135deg, var(--blue-600), var(--blue-400));
+    color: #fff;
+    border-color: transparent;
+    transform: rotate(-45deg);
+}
+@media (max-width: 720px) {
+    .news-entry-card { padding: 1.1rem 1.2rem; }
+    .news-entry-icon { width: 48px; height: 48px; font-size: 1.2rem; }
+}
