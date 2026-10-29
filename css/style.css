@@ -232,8 +232,18 @@ body {
     font-size: 3rem;
     border: 4px solid white;
     transition: color 0.3s;
+    overflow: hidden;
 }
 .member-card:hover .avatar { color: var(--blue-500); }
+
+/* 卡片头像图片 */
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
 
 .member-name {
     font-size: 1.35rem;
@@ -663,50 +673,22 @@ body {
     transform: translateX(3px) rotate(-45deg);
 }
 
-/* ===== 响应式 ===== */
-@media (max-width: 1100px) {
-    .members-grid { grid-template-columns: repeat(2, 1fr); }
-    .welcome h1 { font-size: 1.7rem; }
-}
-@media (max-width: 720px) {
-    body { padding: 1.2rem 1.2rem 3rem; }
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        padding: 1.5rem;
-        border-radius: 36px;
-    }
-    .logo { width: 64px; height: 64px; font-size: 1.9rem; }
-    .welcome h1 { font-size: 1.4rem; }
-    .members-grid { grid-template-columns: 1fr; }
-    .section-title h2 { font-size: 1.5rem; }
-    .info-note { grid-template-columns: 1fr; }
-    .detail-header { flex-direction: column; text-align: center; padding: 1.6rem; }
-    .markdown-body { padding: 1.6rem 1.4rem; }
-    .back-link { margin-bottom: 1.2rem; }
-    .news-entry-card { padding: 1.1rem 1.2rem; }
-    .news-entry-icon { width: 48px; height: 48px; font-size: 1.2rem; }
-
-    /* 新闻列表移动端 */
-    .news-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.9rem;
-        padding: 1.2rem 1.3rem;
-    }
-    .news-date {
-        width: 56px;
-        height: 56px;
-        border-radius: 16px;
-    }
-    .news-day { font-size: 1.35rem; }
-    .news-item { position: relative; }
-    .news-arrow {
-        position: absolute;
-        right: 1.3rem;
-        top: 1.3rem;
-    }
-}
-
-::selection { background: rgba(43, 122, 158, 0.3); color: var(--blue-900); }
+/* ===== 访问人次计数器 ===== */
+.visitor-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 2.5rem;
+    padding: 0.8rem 1.6rem;
+    font-size: 0.9rem;
+    color: var(--blue-600);
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(12px);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 20px -10px rgba(0, 50, 100, 0.15);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn
