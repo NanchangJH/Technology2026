@@ -101,15 +101,14 @@
     </div>
 
     <script>
-        // CountAPI 访问计数器
-        fetch('https://api.countapi.xyz/hit/nanchangjh-tech2026/homepage')
-            .then(r => r.json())
-            .then(data => {
-                document.getElementById('visitor-count').textContent = data.value;
-            })
-            .catch(() => {
-                document.getElementById('visitor-count').textContent = '—';
-            });
-    </script>
+    fetch('https://countapi.mileshilliard.com/api/v1/hit/nanchangjh-tech2026-homepage')
+        .then(r => r.json())
+        .then(data => {
+            document.getElementById('visitor-count').textContent = data.value;
+        })
+        .catch(() => {
+            document.getElementById('visitor-count').textContent = '—';
+        });
+</script>
 </body>
 </html>
