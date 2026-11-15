@@ -58,5 +58,11 @@
     "file": "article-0010.md",
     "date": "2026-10-30",
     "summary": "大连大学，与你相约"
+  },
+  {
+    "title": "网站修复公告",
+    "file": "article-0011.md",
+    "date": "2026-11-15",
+    "summary": "渲染问题已解决"
   }
 ]
